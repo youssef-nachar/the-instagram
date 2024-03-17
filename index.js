@@ -36,19 +36,40 @@
 //     h4.style.color="black"
 //     }
 //     click++
-    
+
 // }
-const container=document.querySelector(".container");
-const profile = document.querySelector(".container-profile")
-go_profile=()=>{
-container.style.visibility="hidden";
-profile.style.visibility="visible";
+const container = document.querySelector(".container");
+const profile = document.querySelector(".container-profile");
+const messengers = document.querySelector(".messenger-container");
+const notifaction = document.querySelector(".notfication")
+go_profile = () => {
+    container.style.visibility = "hidden";
+    profile.style.visibility = "visible";
+    notifaction.style.visibility="hidden";
+
 }
 
 
-go_hom=()=>{
-profile.style.visibility="hidden";
+go_hom = () => {
+    profile.style.visibility = "hidden";
+    container.style.visibility = "visible";
+    messengers.style.visibility = "hidden";
+    notifaction.style.visibility="hidden";
 
-container.style.visibility="visible";
+
+}
+
+messenger = () => {
+    messengers.style.visibility = "visible";
+    container.style.visibility = "hidden";
+    notifaction.style.visibility="hidden";
+
+
+}
+notification = () => {
+    notifaction.style.visibility="visible";
+    container.style.visibility = "hidden";
+    messengers.style.visibility = "hidden";
+    
 
 }
